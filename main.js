@@ -3,10 +3,24 @@ var app = new Vue({
 	data: {
 		product: "socks",
 		description: "A pair of warm, fuzzy socks",
-		image: "https://dl.dropboxusercontent.com/s/9zccs3f0pimj0wj/vmSocks-green-onWhite.jpg?dl=0",
+		image: "./green.jpg",
 		link: "https://google.com",
 		inventory: 8,
-		onSale: true
+		onSale: true,
+		details: ["80% cotton", "20% Details"],
+		variants: [
+			{
+				variantId: 2234,
+				variantColor: "green",
+			},
+			{
+				variantId: 2235,
+				variantColor: "blue",
+
+			}
+		],
+		sizes: ["small", "regular", "large"],
+		cart: 0
 	}
 })
 

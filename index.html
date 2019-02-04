@@ -6,7 +6,7 @@
 
   <div class="product">
     <div class="product-image">
-      <img :src="image" height=100 width=100 />
+      <img :src="image" />
     </div>
 
     <div class="product-info">
@@ -16,6 +16,25 @@
       <p v-else-if="inventory < 10 && inventory > 0">Almost sold out!</p>
       <p v-else>Out of Stock</p>
       <a :href="link">Google</a>
+
+      <ul>
+        <li v-for="detail in details">{{ detail }}</li>
+      </ul>
+
+      <div v-for="variant in variants" :key="variant.variantId">
+        <p>{{variant.varantColor}}</p>
+      </div>
+
+      <h3>Sizes</h3>
+      <ul>
+        <li v-for="size in sizes">{{size}}</li>
+      </ul>
+
+      <div class="cart">
+        <p>Cart {{cart}}</p>
+      </div>
+      <button v-on:click="cart += 1">Add to cart</button>
+
     </div>
   </div>
 </div>
